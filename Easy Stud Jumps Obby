@@ -1,0 +1,391 @@
+-- Define Library
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
+
+-- Define Windows
+
+local window1 = library:Window("Project 0n1")
+
+local window2 = library:Window("Eggs")
+
+local window5 = library:Window("More")
+
+local window6 = library:Window("Discord")
+
+-- Define Functions
+
+function DestroyGui()
+
+    game.CoreGui:FindFirstChild('TurtleUiLib'):Destroy()
+
+end
+
+-- Define Window1
+
+window1:Label("Spawn World", Color3.fromRGB(127, 143, 166))
+
+window1:Button("Unlock All Stages", function()
+
+    wait(1)
+
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,-5,211))
+
+    wait(0.3)
+
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,1266,-871))
+
+    wait(0.3)
+
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,1266,-987))
+
+    wait(5)
+
+end)
+
+window1:Toggle("Auto Farm Stages", false, function(state)
+
+    	if state then           _G.loop = true
+
+           while _G.loop == true do wait()
+
+                 wait(1)
+
+                 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,-5,211))
+
+                 wait(0.3)
+
+                 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,1266,-871))
+
+                 wait(0.3)
+
+                 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,1266,-987))
+
+                 wait(5)
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+window1:Label("Candy World", Color3.fromRGB(127, 143, 166))
+
+window1:Button("Unlock All Stages", function()
+
+    wait(1)
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,-5,210))
+
+wait(0.3)
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,2480,-626))
+
+wait(0.3)
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,2482,-655))
+
+wait(5)
+
+end)
+
+window1:Toggle("Auto Farm Stages", false, function(state)
+
+    	if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+                 wait(1)
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,-5,210))
+
+wait(0.3)
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,2480,-626))
+
+wait(0.3)
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,2482,-655))
+
+wait(5)
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+-- Define Window2
+
+window2:Label("Spawn World", Color3.fromRGB(127, 143, 166))
+
+window2:Toggle("Grass Egg", false, function(state)
+
+    	if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+                 local args = {
+
+    [1] = "Grass Egg",
+
+    [2] = 1
+
+}
+
+ 
+
+game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))               
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+window2:Toggle("Jungle Egg", false, function(state)
+
+    	if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+                 local args = {
+
+    [1] = "Jungle Egg",
+
+    [2] = 1
+
+}
+
+ 
+
+game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))             
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+window2:Toggle("Noob Egg", false, function(state)
+
+    	if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+                 local args = {
+
+    [1] = "Noob Egg",
+
+    [2] = 1
+
+}
+
+ 
+
+game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))              
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+window2:Label("Candy World", Color3.fromRGB(127, 143, 166))
+
+window2:Toggle("Demonic Egg", false, function(state)
+
+    	if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+                 local args = {
+
+    [1] = "Demonic Egg",
+
+    [2] = 1
+
+}
+
+ 
+
+game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+window2:Toggle("Hell Egg", false, function(state)
+
+    	if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+                 local args = {
+
+    [1] = "Hell Egg",
+
+    [2] = 1
+
+}
+
+ 
+
+game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+-- Define Window5
+
+window5:Label("Settings", Color3.fromRGB(127, 143, 166))
+
+window5:Box("Walk Speed", function(pws)
+
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
+
+end)
+
+window5:Box("Jump Power", function(pjp)
+
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
+
+end)
+
+window5:Box("Hip Height", function(phh)
+
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh
+
+end)
+
+window5:Button("Anti Kick", function()
+
+    local vu = game:GetService("VirtualUser")
+
+            game:GetService("Players").LocalPlayer.Idled:connect(function()
+
+                    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+                    wait(1)
+
+                vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+            end)	
+
+end)
+
+window5:Button("Low Graphics", function()
+
+        	        _G.Settings = {
+
+            Players = {
+
+                ["Ignore Me"] = true, -- Ignore your Character
+
+                ["Ignore Others"] = true -- Ignore other Characters
+
+            },
+
+            Meshes = {
+
+            Destroy = false,
+
+            LowDetail = true
+
+        },
+
+        Images = {
+
+            Invisible = true,
+
+            LowDetail = false,
+
+            Destroy = false,
+
+        },
+
+        ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
+
+        ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
+
+        ["No Explosions"] = true, -- Makes Explosion's invisible:
+
+        ["No Clothes"] = true, -- Removes Clothing from the game
+
+        ["Low Water Graphics"] = true, -- Removes Water Quality
+
+        ["No Shadows"] = true, -- Remove Shadows
+
+        ["Low Rendering"] = true, -- Lower Rendering
+
+        ["Low Quality Parts"] = true -- Lower quality parts
+
+    }
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()	
+
+end)
+
+window5:Button("Destroy GUI", function()
+
+    wait(0.5)
+
+    DestroyGui()
+
+end)
+
+-- Window6
+
+window6:Button("Copy Discord Invite", function()
+
+    setclipboard("https://discord.gg/UnjnNVx6Tp")
+
+end)
+
+window6:Label("discord.gg/UnjnNVx6Tp", Color3.fromRGB(127, 143, 166))
+
+window6:Label("main_dll#0676", Color3.fromRGB(127, 143, 166))
