@@ -1,0 +1,205 @@
+-- Define Library
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
+
+-- Define Windows
+
+local window1 = library:Window("Project 0n1")
+
+local window5 = library:Window("More")
+
+local window6 = library:Window("Discord")
+
+-- Define Functions
+
+function DestroyGui()
+
+    game.CoreGui:FindFirstChild('TurtleUiLib'):Destroy()
+
+end
+
+-- Define Window1
+
+window1:Label("Main Farms", Color3.fromRGB(127, 143, 166))
+
+window1:Toggle("Auto Farm Wins", false, function(state)
+
+    	if state then           _G.loop = true
+
+           while _G.loop == true do wait()
+
+                 wait(0.1)
+
+                 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-295,180,336))
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+window1:Button("Teleport To Lobby", function()
+
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-247,180,306))
+
+end)
+
+window1:Button("Teleport To Island", function()
+
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-134,47,7))
+
+end)
+
+window1:Label("Extra Stuff", Color3.fromRGB(127, 143, 166))
+
+window1:Button("Say Disaster In Chat", function()
+
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(game.Players.LocalPlayer.Character.SurvivalTag.Value, "All")
+
+end)
+
+window1:Button("Remove Sand Storm Blur", function()
+
+    game.Players.LocalPlayer.PlayerGui.SandStormGui:destroy()
+
+end)
+
+window1:Button("Remove Blizzard Blur", function()
+
+    game.Players.LocalPlayer.PlayerGui.BlizzardGui:destroy()
+
+end)
+
+window1:Button("Stand On Island Rocks", function()
+
+    for i, v in pairs (game.workspace:GetDescendants())do
+
+            if v.Name == 'LowerRocks' then
+
+                v.CanCollide = true
+
+                end
+
+        end
+
+end)
+
+window1:Button("Remove Fall Damage", function()
+
+    game.Players.LocalPlayer.Character.FallDamageScript:Destroy()
+
+end)
+
+-- Define Window5
+
+window5:Label("Settings", Color3.fromRGB(127, 143, 166))
+
+window5:Box("Walk Speed", function(pws)
+
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
+
+end)
+
+window5:Box("Jump Power", function(pjp)
+
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
+
+end)
+
+window5:Box("Hip Height", function(phh)
+
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh
+
+end)
+
+window5:Button("Anti Kick", function()
+
+    local vu = game:GetService("VirtualUser")
+
+            game:GetService("Players").LocalPlayer.Idled:connect(function()
+
+                    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+                    wait(1)
+
+                vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+            end)	
+
+end)
+
+window5:Button("Low Graphics", function()
+
+        	        _G.Settings = {
+
+            Players = {
+
+                ["Ignore Me"] = true, -- Ignore your Character
+
+                ["Ignore Others"] = true -- Ignore other Characters
+
+            },
+
+            Meshes = {
+
+            Destroy = false,
+
+            LowDetail = true
+
+        },
+
+        Images = {
+
+            Invisible = true,
+
+            LowDetail = false,
+
+            Destroy = false,
+
+        },
+
+        ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
+
+        ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
+
+        ["No Explosions"] = true, -- Makes Explosion's invisible:
+
+        ["No Clothes"] = true, -- Removes Clothing from the game
+
+        ["Low Water Graphics"] = true, -- Removes Water Quality
+
+        ["No Shadows"] = true, -- Remove Shadows
+
+        ["Low Rendering"] = true, -- Lower Rendering
+
+        ["Low Quality Parts"] = true -- Lower quality parts
+
+    }
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()	
+
+end)
+
+window5:Button("Destroy GUI", function()
+
+    wait(0.5)
+
+    DestroyGui()
+
+end)
+
+-- Window6
+
+window6:Button("Copy Discord Invite", function()
+
+    setclipboard("https://discord.gg/UnjnNVx6Tp")
+
+end)
+
+window6:Label("discord.gg/UnjnNVx6Tp", Color3.fromRGB(127, 143, 166))
+
+window6:Label("main_dll#0676", Color3.fromRGB(127, 143, 166))
