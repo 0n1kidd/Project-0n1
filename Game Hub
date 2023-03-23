@@ -34,6 +34,14 @@ function NDS()
 
 end
 
+function ESJO()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/0n1kidd/Project-0n1/main/Easy%20Stud%20Jumps%20Obby"))()
+
+end
+
+
+
 -- Define Window1
 
 window1:Button("Legends Of Speed", function()
@@ -51,6 +59,12 @@ end)
 window1:Button("Natural Disaster Survival", function()
 
     NDS()
+
+end)
+
+window1:Button("Easy Stud Jumps Obby", function()
+
+    ESJO()
 
 end)
 
