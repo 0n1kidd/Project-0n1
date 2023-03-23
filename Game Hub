@@ -17,13 +17,13 @@ function DestroyGui()
 end
 
 function LOS()
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0n1kidd/Project-0n1/main/Legends%20Of%20Speed"))()
     
 
 end
 
 function BBS()
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0n1kidd/Project-0n1/main/Broken%20Bones%20IV"))()
     
 
 end
@@ -32,13 +32,13 @@ end
 
 window1:Button("Legends Of Speed", function()
 
-    
+    LOS()
 
 end)
 
 window1:Button("Broke Bones IV", function()
 
-    
+    BBS()
 
 end)
 
