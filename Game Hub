@@ -28,6 +28,12 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/0n1kidd/Project-0n1/m
 
 end
 
+function NDS()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/0n1kidd/Project-0n1/main/Natural%20Disaster%20Survival"))()
+
+end
+
 -- Define Window1
 
 window1:Button("Legends Of Speed", function()
@@ -39,6 +45,12 @@ end)
 window1:Button("Broke Bones IV", function()
 
     BBS()
+
+end)
+
+window1:Button("Natural Disaster Survival", function()
+
+    NDS()
 
 end)
 
