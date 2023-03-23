@@ -1,0 +1,63 @@
+-- Define Library
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
+
+-- Define Windows
+
+local window1 = library:Window("Project 0n1")
+
+local window2 = library:Window("More")
+
+-- Define Functions
+
+function DestroyGui()
+
+    game.CoreGui:FindFirstChild('TurtleUiLib'):Destroy()
+
+end
+
+function LOS()
+
+    
+
+end
+
+function BBS()
+
+    
+
+end
+
+-- Define Window1
+
+window1:Button("Legends Of Speed", function()
+
+    
+
+end)
+
+window1:Button("Broke Bones IV", function()
+
+    
+
+end)
+
+-- Define Window2
+
+window2:Button("Copy Discord Invite", function()
+
+    setclipboard("https://discord.gg/UnjnNVx6Tp")
+
+end)
+
+window2:Button("Destroy GUI", function()
+
+    wait(0.5)
+
+    DestroyGui()
+
+end)
+
+window2:Label("discord.gg/UnjnNVx6Tp", Color3.fromRGB(127, 143, 166))
+
+window2:Label("main_dll#0676", Color3.fromRGB(127, 143, 166))
